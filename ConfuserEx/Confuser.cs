@@ -22,9 +22,9 @@ class Confuser
         if (Directory.Exists(confuserdirectory))
         {
             Directory.Delete(confuserdirectory, true);
-            Directory.CreateDirectory(confuserdirectory);
         }
-
+        
+        Directory.CreateDirectory(confuserdirectory);
         ZipFile.ExtractToDirectory(Path.GetTempPath() + "confuser.zip", confuserdirectory);
 
         ProcessStartInfo process = new ProcessStartInfo();
